@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>User Sign-Up</h1>
+<form action="/" method='post'>
+    Username:<br>
+    <input type="text" name="Username" value="{{username}}" 
+    maxlength="20" min="3" required>
+    <p class="error">{{username_error}}</p>
+    <br>
+    Password:<br>
+    <input type="password" name="Password" maxlength="20" 
+    min="3"  required>
+        <p class="error">{{password_errors[0]}}</p>
+    <br>
+    Verify Password:<br>
+    <input type="password" name="Verify Password" 
+    maxlength="20" min="3" required>        
+    <p class="error">{{password_errors[1]}}</p>
+    <br>
+    Email(Optional):<br>
+    <input type="text" name="Email" value="{{email}}" >
+    <p class="error">{{email_error}}</p>
+    <br><br>
+    <input type="submit" value="Sign Yo @#$% Up">
+</form>
+{% endblock %}
